@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FlirtyPandaWeb", "src\FlirtyPandaWeb\FlirtyPandaWeb.xproj", "{BA740E2E-D458-4A4A-9D01-00137959D245}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B665639E-E9FE-4C57-9A97-B16772430AE6}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FlirtyPandaWeb.Tests", "test\FlirtyPandaWeb.Tests\FlirtyPandaWeb.Tests.xproj", "{C04CB53C-76B9-4D55-998B-928B2D170B6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{BA740E2E-D458-4A4A-9D01-00137959D245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA740E2E-D458-4A4A-9D01-00137959D245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA740E2E-D458-4A4A-9D01-00137959D245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04CB53C-76B9-4D55-998B-928B2D170B6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04CB53C-76B9-4D55-998B-928B2D170B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04CB53C-76B9-4D55-998B-928B2D170B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04CB53C-76B9-4D55-998B-928B2D170B6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BA740E2E-D458-4A4A-9D01-00137959D245} = {BFAD15F6-39E2-4783-A37A-104444CEA7A2}
+		{C04CB53C-76B9-4D55-998B-928B2D170B6F} = {B665639E-E9FE-4C57-9A97-B16772430AE6}
 	EndGlobalSection
 EndGlobal

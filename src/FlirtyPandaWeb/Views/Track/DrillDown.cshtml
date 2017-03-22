@@ -1,0 +1,50 @@
+﻿@model DrillDownViewModel_User_Tracks
+@{
+    int i = 0;
+}
+@{
+    ViewBag.Title = $"Tracks for {Model.User.Name}";
+    Layout = "_Layout";
+}
+
+
+<table class="table table-striped table-bordered table-condensed">
+    <tr>
+        <th></th>
+        <th>TrackID</th>
+        <th>Name</th>
+        <th>Start Time</th>
+        <th>Duration</th>
+        <th>Total Distance</th>
+        <th>Data Points</th>
+    </tr>
+    @foreach (var m in Model.Tracks) {
+
+        int DataPoints = (from lm in Model.LocationMeasurements.Where(lm => lm.TrackID == m.TrackID)
+                          select lm).Count();
+
+        DateTime startDTS = (from lm in Model.LocationMeasurements.Where(lm => lm.TrackID == m.TrackID)
+                             select lm.DateTimeStamp).Min();
+
+        DateTime endDTS = (from lm in Model.LocationMeasurements.Where(lm => lm.TrackID == m.TrackID)
+                             select lm.DateTimeStamp).Max();
+
+        TimeSpan duration = (endDTS - startDTS);
+
+        if (i < 50) {
+            <tr>
+                <td>
+                    <a class="btn btn-sm btn-primary pull-left"
+                       asp-action="List" asp-controller="LocationMeasurement">Drill Down</a>
+                </td>
+                <td>@m.TrackID</td>
+                <td>@m.Name</td>
+                <td>startDTS.ToString()</td>
+                <td>duration.ToString()</td>
+                <td>WIP</td>
+                <td>@DataPoints.ToString()</td>
+            </tr>
+        }
+        i = i + 1;
+    }
+</table>

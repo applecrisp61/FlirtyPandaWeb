@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Track>
+@{
+    int i = 0;
+}
+
+<table class="table table-striped table-bordered table-condensed">
+    <tr>
+        <th></th>
+        <th>TrackID</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var m in Model) {
+        if (i < 50) {
+            <tr>
+                <td>                 
+                    <a class="btn btn-sm btn-primary pull-left"
+                        asp-action="List" asp-controller="LocationMeasurement">Drill Down</a>
+                </td>
+                <td>@m.TrackID</td>
+                <td>@m.Name</td>
+            </tr>
+        }
+        i = i + 1;
+    }
+</table>
